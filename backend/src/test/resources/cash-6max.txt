@@ -1,0 +1,71 @@
+PokerStars Hand #245100100001:  Hold'em No Limit ($0.25/$0.50 USD) - 2024/03/12 20:14:33 ET
+Table 'Acrux II' 6-max Seat #4 is the button
+Seat 1: villain1 ($52.30 in chips)
+Seat 2: villain2 ($48.00 in chips)
+Seat 3: villain3 ($61.75 in chips)
+Seat 4: Hero ($50.00 in chips)
+Seat 5: villain5 ($73.10 in chips)
+Seat 6: villain6 ($50.00 in chips)
+villain5: posts small blind $0.25
+villain6: posts big blind $0.50
+*** HOLE CARDS ***
+Dealt to Hero [Ah Kd]
+villain1: folds
+villain2: raises $1.00 to $1.50
+villain3: folds
+Hero: calls $1.50
+villain5: folds
+villain6: folds
+*** FLOP *** [Ks 7h 2c]
+villain2: bets $2.00
+Hero: calls $2.00
+*** TURN *** [Ks 7h 2c] [Td]
+villain2: checks
+Hero: bets $3.50
+villain2: calls $3.50
+*** RIVER *** [Ks 7h 2c Td] [9s]
+villain2: checks
+Hero: checks
+*** SHOW DOWN ***
+villain2: shows [Qc Qd] (a pair of Queens)
+Hero: shows [Ah Kd] (a pair of Kings)
+Hero collected $14.05 from pot
+*** SUMMARY ***
+Total pot $14.75 | Rake $0.70
+Board [Ks 7h 2c Td 9s]
+Seat 1: villain1 folded before Flop (didn't bet)
+Seat 2: villain2 showed [Qc Qd] and lost with a pair of Queens
+Seat 3: villain3 folded before Flop (didn't bet)
+Seat 4: Hero (button) showed [Ah Kd] and won ($14.05) with a pair of Kings
+Seat 5: villain5 (small blind) folded before Flop
+Seat 6: villain6 (big blind) folded before Flop
+
+PokerStars Hand #245100100002:  Hold'em No Limit ($0.25/$0.50 USD) - 2024/03/12 20:17:02 ET
+Table 'Acrux II' 6-max Seat #5 is the button
+Seat 1: villain1 ($66.05 in chips)
+Seat 2: villain2 ($40.50 in chips)
+Seat 3: villain3 ($61.75 in chips)
+Seat 4: Hero ($64.05 in chips)
+Seat 5: villain5 ($72.60 in chips)
+Seat 6: villain6 ($50.00 in chips)
+villain6: posts small blind $0.25
+villain1: posts big blind $0.50
+*** HOLE CARDS ***
+Dealt to Hero [7s 2d]
+villain2: folds
+villain3: raises $1.50 to $2.00
+Hero: folds
+villain5: folds
+villain6: folds
+villain1: calls $1.50
+*** FLOP *** [9h 4s 4d]
+villain1: checks
+villain3: bets $2.50
+villain1: folds
+Uncalled bet ($2.50) returned to villain3
+villain3 collected $4.15 from pot
+*** SUMMARY ***
+Total pot $4.25 | Rake $0.10
+Board [9h 4s 4d]
+Seat 1: villain1 (big blind) folded on the Flop
+Seat 3: villain3 won ($4.15)
