@@ -1,6 +1,9 @@
 package com.pokeranalyzer.parser;
 
+import com.pokeranalyzer.model.Action;
+import com.pokeranalyzer.model.ActionType;
 import com.pokeranalyzer.model.HandHistory;
+import com.pokeranalyzer.model.Street;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -63,5 +66,43 @@ class HandHistoryParserTest {
         assertEquals("245100100002", h.handId());
         assertEquals(5, h.buttonSeat());
         assertEquals(3, h.board().size(), "hand 2 ends on the flop");
+    }
+
+    @Test
+    void parsesPreflopActionsInOrder() throws IOException {
+        HandHistory h = parser.parseAll(sample()).get(0);
+        List<Action> preflop = h.actions().get(Street.PREFLOP);
+        assertEquals(8, preflop.size());
+        assertEquals("villain5", preflop.get(0).player());
+        assertEquals(ActionType.POST_SMALL_BLIND, preflop.get(0).type());
+        assertEquals(0.25, preflop.get(0).amount(), 0.0001);
+        assertEquals("villain6", preflop.get(1).player());
+        assertEquals(ActionType.POST_BIG_BLIND, preflop.get(1).type());
+    }
+
+    @Test
+    void parsesRaiseToAmount() throws IOException {
+        HandHistory h = parser.parseAll(sample()).get(0);
+        Action raise = h.actions().get(Street.PREFLOP).stream()
+                .filter(a -> a.type() == ActionType.RAISE)
+                .findFirst().orElseThrow();
+        assertEquals("villain2", raise.player());
+        assertEquals(1.00, raise.amount(), 0.0001);
+        assertEquals(1.50, raise.toAmount(), 0.0001);
+    }
+
+    @Test
+    void parsesPostflopActionsPerStreet() throws IOException {
+        HandHistory h = parser.parseAll(sample()).get(0);
+        assertEquals(2, h.actions().get(Street.FLOP).size());
+        assertEquals(3, h.actions().get(Street.TURN).size());
+        assertEquals(2, h.actions().get(Street.RIVER).size());
+    }
+
+    @Test
+    void parsesPotAndRake() throws IOException {
+        HandHistory h = parser.parseAll(sample()).get(0);
+        assertEquals(14.75, h.totalPot(), 0.0001);
+        assertEquals(0.70, h.rake(), 0.0001);
     }
 }
