@@ -50,7 +50,7 @@ public class HandHistoryParser {
     public List<HandHistory> parseAll(String raw) {
         return Arrays.stream(raw.split("(?m)^(?=PokerStars Hand #)"))
                 .map(String::strip)
-                .filter(s -> !s.isEmpty())
+                .filter(s -> s.startsWith("PokerStars Hand #"))
                 .map(this::parseHand)
                 .toList();
     }
